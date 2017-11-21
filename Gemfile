@@ -1,6 +1,5 @@
 source "https://rubygems.org"
-ruby '2.3.1'
 
-gem 'rspec'
-gem 'rspec-expectations'
-gem 'timecop'
+git_source(:github) {|repo_name| "https://github.com/omarish/vidyo" }
+
+ruby '2.3.1'

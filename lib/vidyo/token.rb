@@ -7,23 +7,17 @@ def to_bytes(x)
   x.force_encoding('utf-8').unpack("C*")
 end
 
-def bin_to_hex(s)
-  s.each_byte.map { |b| b.to_s(16) }.join
-end
-
-class Vidyo
+module Vidyo
   class Token
     def initialize(key:, application_id:, user_name:, expires_in:)
       @key = key
       @application_id = application_id
       @user_name = user_name
       @expires_in = expires_in
-
-      @debug = true
     end
 
     def epoch_seconds
-      # Converts 1970-01-01 to seconds since 0AD.
+      # Converts 1970-01-01 to seconds since 0 AD.
       62167219200
     end
 

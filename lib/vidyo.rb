@@ -1,0 +1,2 @@
+class Vidyo
+end
